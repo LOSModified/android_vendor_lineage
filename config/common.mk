@@ -212,7 +212,7 @@ ifdef LINEAGE_BUILDTYPE
     ifneq ($(LINEAGE_BUILDTYPE), SNAPSHOT)
         ifdef LINEAGE_EXTRAVERSION
             # Force build type to EXPERIMENTAL
-            LINEAGE_BUILDTYPE := EXPERIMENTAL
+            LINEAGE_BUILDTYPE := MODIFIED
             # Remove leading dash from LINEAGE_EXTRAVERSION
             LINEAGE_EXTRAVERSION := $(shell echo $(LINEAGE_EXTRAVERSION) | sed 's/-//')
             # Add leading dash to LINEAGE_EXTRAVERSION
@@ -221,7 +221,7 @@ ifdef LINEAGE_BUILDTYPE
     else
         ifndef LINEAGE_EXTRAVERSION
             # Force build type to EXPERIMENTAL, SNAPSHOT mandates a tag
-            LINEAGE_BUILDTYPE := EXPERIMENTAL
+            LINEAGE_BUILDTYPE := MODIFIED
         else
             # Remove leading dash from LINEAGE_EXTRAVERSION
             LINEAGE_EXTRAVERSION := $(shell echo $(LINEAGE_EXTRAVERSION) | sed 's/-//')
@@ -231,7 +231,7 @@ ifdef LINEAGE_BUILDTYPE
     endif
 else
     # If LINEAGE_BUILDTYPE is not defined, set to UNOFFICIAL
-    LINEAGE_BUILDTYPE := UNOFFICIAL
+    LINEAGE_BUILDTYPE := MODIFIED
     LINEAGE_EXTRAVERSION :=
 endif
 
