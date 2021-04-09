@@ -372,3 +372,25 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Default wifi country code
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.wificountrycode?=00
+
+# Modified
+$(call inherit-product-if-exists, vendor/gms/gms.mk)
+$(call inherit-product-if-exists, vendor/thirdparty/thirdparty.mk)
+
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
+    blkid \
+    e2freefrag \
+    e2fsck \
+    e2image \
+    filefrag \
+    mke2fs \
+    tune2fs
+
+PRODUCT_PACKAGES += \
+    tinycap \
+    tinyhostless \
+    tinymix \
+    tinypcminfo \
+    tinyplay
+endif
