@@ -315,3 +315,16 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled?=$(TARGET_SUPPORTS_64_BIT_APPS)
+
+# Modified
+$(call inherit-product-if-exists, vendor/gms/gms.mk)
+$(call inherit-product-if-exists, vendor/thirdparty/thirdparty.mk)
+
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs
+
+PRODUCT_PACKAGES += \
+    tinymix \
+    tinyplay
