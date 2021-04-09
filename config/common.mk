@@ -328,3 +328,21 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled?=$(TARGET_SUPPORTS_64_BIT_APPS)
+
+# Modified
+$(call inherit-product-if-exists, vendor/gms/gms.mk)
+
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full \
+    librsjni
+
+$(call inherit-product-if-exists, vendor/thirdparty/thirdparty.mk)
+
+PRODUCT_PACKAGES += \
+    e2fsck \
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libsepol \
+    mke2fs \
+    tinymix \
+    tinyplay \
+    tune2fs
