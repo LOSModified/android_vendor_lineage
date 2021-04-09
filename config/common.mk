@@ -337,3 +337,16 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Enable Material Design 3 Expressive
 PRODUCT_PRODUCT_PROPERTIES += \
     is_expressive_design_enabled=true
+
+# Modified
+$(call inherit-product-if-exists, vendor/gms/gms.mk)
+$(call inherit-product-if-exists, vendor/thirdparty/thirdparty.mk)
+
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs
+
+PRODUCT_PACKAGES += \
+    tinymix \
+    tinyplay
