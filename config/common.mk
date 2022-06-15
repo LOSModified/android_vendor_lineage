@@ -233,6 +233,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     CarSystemUI \
     SystemUI
 
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    Settings \
+    TrebuchetQuickStep
+
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
