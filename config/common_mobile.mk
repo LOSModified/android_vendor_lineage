@@ -14,9 +14,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Apps
 PRODUCT_PACKAGES += \
-    Backgrounds \
-    ExactCalculator \
-    Jelly
+    Backgrounds
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
