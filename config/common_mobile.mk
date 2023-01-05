@@ -10,17 +10,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     Aperture \
     Backgrounds \
-    Eleven \
-    Etar \
-    ExactCalculator \
-    Jelly \
     Profiles \
     Seedvault
-
-ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
-PRODUCT_PACKAGES += \
-    AudioFX
-endif
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
