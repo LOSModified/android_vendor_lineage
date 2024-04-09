@@ -302,3 +302,10 @@ include vendor/lineage/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
+
+# Virtualization
+$(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.hypervisor.protected_vm.supported=1 \
+    ro.boot.hypervisor.vm.supported=1
