@@ -295,3 +295,8 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.hypervisor.vm.supported=1 \
     ro.boot.hypervisor.protected_vm.supported=1
+
+# EGL - Blobcache configuration
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.egl.blobcache.multifile=true \
+    ro.egl.blobcache.multifile_limit=33554432
