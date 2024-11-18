@@ -325,3 +325,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Disable MTE Async for system server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.arm64.memtag.system_server?=off
+
+# Dalvik
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.dex2oat64.enabled?=$(TARGET_SUPPORTS_64_BIT_APPS)
