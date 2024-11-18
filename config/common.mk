@@ -308,3 +308,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Zygote
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     zygote.critical_window.minute?=10
+
+# Disable MTE Async for system server
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.arm64.memtag.system_server?=off
