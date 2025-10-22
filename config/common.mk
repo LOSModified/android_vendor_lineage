@@ -349,6 +349,12 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     zygote.critical_window.minute?=10
 
+# Disable MTE on certain system processes that have it enabled by default
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.arm64.memtag.app.com.android.nfc?=off \
+    persist.arm64.memtag.app.com.android.se?=off \
+    persist.arm64.memtag.app.com.google.android.bluetooth?=off
+
 # Disable MTE Async for system server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.arm64.memtag.system_server?=off
