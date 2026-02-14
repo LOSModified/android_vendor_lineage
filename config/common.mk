@@ -375,3 +375,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     remote_provisioning.enable_rkpd=true \
     remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
+# Default wifi country code
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.wificountrycode?=00
