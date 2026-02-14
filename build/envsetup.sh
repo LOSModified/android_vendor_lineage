@@ -1035,3 +1035,4 @@ export BUILD_USERNAME=android-build
 export KBUILD_BUILD_USER=build-user
 export KBUILD_BUILD_HOST=build-host
 export SKIP_ABI_CHECKS=true
+export USE_THINLTO_CACHE=true
