@@ -1025,7 +1025,7 @@ function build_kernel() {
 
 function generate_host_overrides() {
     HEX=$(openssl rand -hex 8)
-    ALPHA=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 4 | head -n 1)
+    ALPHA=$(tr -dc 'a-z0-9' < /dev/urandom | head -c 4)
     export BUILD_HOSTNAME="r-${HEX}-${ALPHA}"
 }
 
